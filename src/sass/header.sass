@@ -1,0 +1,103 @@
+.header
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	padding-top: 25px
+	@media screen and (max-width: 980px)
+		padding-left: .5rem
+		padding-right: .5rem
+	@media screen and (max-width: 480px)
+		flex-direction: column
+
+	&__logo
+		margin: 0
+		padding: 0
+		flex-basis: 40%
+		@media screen and (max-width: 480px)
+			text-align: center
+
+		&__pic
+			max-width: 320px 
+
+.search
+	flex-basis: 60%
+	flex-grow: 1
+	align-self: flex-end
+	@media screen and (max-width: 480px)
+		align-self: auto
+
+	&__form
+		display: flex
+		justify-content: flex-end
+		@media screen and (max-width: 480px)
+			justify-content: center
+
+		&__text, &__submit
+			display: block
+			height: 2rem
+
+		&__text
+			width: 158px
+			font-family: Tahoma, sans-serif
+			font-size: 0.75rem
+			border: 1px solid $border-color
+			border-right: none
+			padding-left: 10px
+			background-color: $border-color
+
+			@media screen and (max-width: 480px)
+				width: 80%
+
+			&::placeholder
+				color: $menu-color
+				font-family: Tahoma, sans-serif
+				font-size: 0.75rem
+
+			&:focus
+				outline: none
+				border-color: $active-color
+
+		&__submit
+			width: 42px
+			border: none
+			background-color: $active-color
+			color: rgb(254, 254, 254)
+			font-size: 0.875rem
+			font-family: OswaldRegular, sans-serif
+
+			&:hover
+				background-color: lighten($active-color, 10%)
+			&:focus
+				outline: none
+
+.navigation
+	margin: 23px auto 30px
+	width: 100%
+	border: 1px solid $border-color
+	background-color: $nav-bg-color
+	&__list
+		display: flex
+		list-style-type: none
+		flex-wrap: wrap
+
+		&__item
+			flex-basis: 12.5%
+			
+			&__link
+				display: block
+				min-height: 2.5rem
+				text-transform: uppercase
+				text-decoration: none
+				color: $menu-color
+				font-family: OswaldRegular, sans-serif
+				font-size: 0.875rem
+				text-align: center
+				padding: 0.5625rem
+
+				&:hover
+					color: darken($menu-color, 10%)
+
+				&--active
+					background-color: $active-color // Подумай как перекрыть дефолтный бордер, элегантно!
+					color: #fff
+

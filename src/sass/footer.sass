@@ -1,0 +1,148 @@
+.footer__wrap
+	background-color: $footer-bg-color
+
+.footer
+	max-width: 960px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+
+	&__item
+		display: flex
+		flex-wrap: wrap
+		color: $footer-font-color
+		font-family: Tahoma, sans-serif
+		font-size: 0.6875rem
+		flex-direction: column
+		margin-right: 20px
+		flex-grow: 1
+
+		&:last-child
+			margin-right: 0
+
+		&--twitter
+			flex-basis: 300px
+
+			.footer__item__content
+				display: flex
+				flex-wrap: wrap
+				flex-direction: column
+				padding: 0 1.4375rem 0 0.1875rem
+
+				&__dataLink
+					color: #b4aeae
+
+					&:hover
+						color: lighten(#b4aeae, 10%)
+
+		&--sitemap
+			flex-basis: 150px
+
+		&--social
+			flex-basis: 130px
+
+		&--logo
+			flex-basis: 320px
+			flex-direction: row
+			justify-content: flex-end
+			@media screen and (max-width: 980px)
+				justify-content: center
+
+		&__header
+			color: #fff
+			font-family: OswaldRegular
+			font-size: 0.875rem
+			font-weight: normal
+			text-transform: uppercase
+			border-bottom: 1px solid rgb(145, 145, 145)
+
+			&--logo
+				border-bottom: none
+				margin: 24px 0 0 0
+				height: 38px
+
+		&__content
+			display: flex
+			flex-wrap: wrap
+
+			&__list
+				list-style-type: none
+				display: flex
+				flex-wrap: wrap
+				font-size: 0.75rem
+				flex-grow: 1
+
+				&__item
+					flex-basis: 75px
+					margin-bottom: 0.625rem
+					@media screen and (max-width: 800px)
+						flex-basis: 50%
+
+
+					&__link
+						color: $footer-font-color
+						text-decoration: none
+
+						&:hover
+							color: lighten($footer-font-color, 10%)
+
+			&__link
+				background-image: url("/img/social_sprite.png")
+				font-size: 0
+				display: inline-block
+
+				&:hover
+					animation: scale 0.3s ease-in-out 0.2s
+
+				&--twitter, &--facebook, &--google
+					width: 30px
+					height: 30px
+					margin-right: 10px
+					margin-bottom: 8px
+
+				&--vimeo, &--youtube, &--flickr, &--instagram, &--rss
+					width: 16px
+					height: 16px
+					margin-right: 8px
+
+				&--twitter
+					background-position: -1px -64px
+				&--facebook
+					background-position: -1px 0
+				&--google
+					background-position: -1px -32px
+				&--vimeo
+					background-position: -16px -112px
+				&--youtube
+					background-position: 0 -128px
+				&--flickr
+					background-position: 0 -96px
+				&--instagram
+					background-position: -16px -96px
+				&--rss
+					background-position: 0 -112px
+
+			&__copyright
+				color: $footer-font-color
+				font-size: 0.625rem
+
+				&__authorlink
+					@extend .footer__item__content__copyright
+
+@media screen and (max-width: 800px)
+	.footer__item
+		flex-basis: 50%
+		margin: 0
+		padding: 0.5rem
+
+@keyframes scale
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(1.05)
+	50%
+		transform: scale(1.1)
+	75%
+		transform: scale(1.05)
+	100%
+		transform: none

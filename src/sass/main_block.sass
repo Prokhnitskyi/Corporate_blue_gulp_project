@@ -1,0 +1,129 @@
+.main
+	display: flex
+	flex-wrap: wrap
+	align-items: flex-start
+	margin-bottom: 1.875rem
+	padding-left: 0.625rem
+	padding-right: 0.625rem
+
+	&__article
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-start
+		flex-grow: 1
+
+		&__pic
+			display: block
+			border: 1px solid rgb(201, 201, 201)
+			flex-basis: 140px
+			min-width: 0
+			padding: 1px
+			margin-right: 1.25rem
+
+		&__header
+			font-family: OswaldRegular, sans-serif
+			font-size: 0.875rem
+			font-weight: normal
+			color: $article-header-color
+			text-transform: uppercase
+			display: flex
+			flex-basis: 100%
+			align-items: center
+			margin: 0 auto 1rem
+
+			&::before
+				content: ""
+				display: inline-block
+				height: 0.9375rem
+				width: 0.9375rem
+				background-color: $active-color
+				margin-right: 0.325rem
+
+			&::after
+				content: ""
+				display: inline-block
+				background: transparent url("/img/h1-bg.png")
+				z-index: 1000
+				flex-basis: 20%
+				flex-grow: 1
+				height: 0.9375rem
+				margin-left: 1rem
+
+		&__content
+			font-size: 0.75rem
+			font-family: Tahoma, sans-serif
+			color: $links-bg-color
+			flex-basis: 60%
+			flex-grow: 1
+			margin: 0.25rem auto 1rem
+
+			&__text
+				margin: 0 auto 1.25rem
+
+			&__readMore
+				color: #525252
+				text-decoration: none
+				border-bottom: 2px solid rgb(193, 193, 193)
+
+				&:hover
+					border-bottom-color: darken(rgb(193, 193, 193), 20%)
+
+		&--about
+			flex-basis: 480px
+			margin-bottom: 2.25rem
+
+		&--ceo
+			flex-basis: 460px
+			margin-bottom: 2.25rem
+
+		&__author
+			color: #525252
+
+		&--services, &--teams
+			flex-basis: 320px
+
+		&--support
+			flex-basis: 300px
+
+		&--about, &--services, &--teams
+			padding-right: 1.25rem
+			@media screen and (max-width: 800px)
+				padding-right: 0
+
+		&__list
+			list-style-type: none
+
+			&__item
+				display: flex
+				align-items: flex-start
+				margin-bottom: 0.625rem
+
+				&__pic
+					max-width: 100%
+					flex-basis: 40px
+					padding: 1px
+					border: 1px solid rgb(201, 201, 201)
+					margin-right: 0.6875rem
+					min-width: 0
+
+				&__container
+					font-size: 0.6875rem
+					line-height: 1.273
+					font-family: Tahoma, sans-serif
+					color: $links-bg-color
+					flex-basis: 83%
+					flex-grow: 1
+
+					&__header
+						color: #525252
+						text-transform: uppercase
+						font-weight: normal
+						margin: 0 0 0.375rem
+
+					&__description
+						margin: 0
+
+@media screen and (max-width: 959px)
+	.main__article
+		flex-basis: 100%
+		justify-content: center
