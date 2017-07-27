@@ -12,14 +12,6 @@
 		align-items: flex-start
 		flex-grow: 1
 
-		&__pic
-			display: block
-			border: 1px solid rgb(201, 201, 201)
-			flex-basis: 140px
-			min-width: 0
-			padding: 1px
-			margin-right: 1.25rem
-
 		&__header
 			font-family: OswaldRegular, sans-serif
 			font-size: 0.875rem
@@ -56,6 +48,19 @@
 			flex-basis: 60%
 			flex-grow: 1
 			margin: 0.25rem auto 1rem
+
+			&::after
+				content: ''
+				display: block
+				clear: both
+
+			&__pic
+				float: left
+				display: block
+				border: 1px solid rgb(201, 201, 201)
+				max-width: 140px
+				padding: 1px
+				margin-right: 1.25rem
 
 			&__text
 				margin: 0 auto 1.25rem

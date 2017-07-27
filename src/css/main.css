@@ -467,17 +467,6 @@ ul {
           flex-grow: 1;
 }
 
-.main__article__pic {
-  display: block;
-  border: 1px solid #c9c9c9;
-  -webkit-flex-basis: 140px;
-      -ms-flex-preferred-size: 140px;
-          flex-basis: 140px;
-  min-width: 0;
-  padding: 1px;
-  margin-right: 1.25rem;
-}
-
 .main__article__header, .clients__header {
   font-family: OswaldRegular, sans-serif;
   font-size: 0.875rem;
@@ -535,6 +524,21 @@ ul {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin: 0.25rem auto 1rem;
+}
+
+.main__article__content::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.main__article__content__pic {
+  float: left;
+  display: block;
+  border: 1px solid #c9c9c9;
+  max-width: 140px;
+  padding: 1px;
+  margin-right: 1.25rem;
 }
 
 .main__article__content__text {
