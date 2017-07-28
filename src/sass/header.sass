@@ -43,7 +43,7 @@
 			border: 1px solid $border-color
 			border-right: none
 			padding-left: 10px
-			background-color: $border-color
+			background-color: $nav-bg-color
 
 			@media screen and (max-width: 480px)
 				width: 80%
@@ -64,6 +64,7 @@
 			color: rgb(254, 254, 254)
 			font-size: 0.875rem
 			font-family: OswaldRegular, sans-serif
+			cursor: pointer
 
 			&:hover
 				background-color: lighten($active-color, 10%)
@@ -73,8 +74,8 @@
 .navigation
 	margin: 23px auto 30px
 	width: 100%
-	border: 1px solid $border-color
 	background-color: $nav-bg-color
+
 	&__list
 		display: flex
 		list-style-type: none
@@ -82,22 +83,37 @@
 
 		&__item
 			flex-basis: 12.5%
-			
+			border-top: 1px solid $border-color
+			border-bottom: 1px solid $border-color
+			color: $menu-color
+
+			&:first-of-type
+				border-left: 1px solid $border-color
+
+			&:last-of-type
+				border-right: 1px solid $border-color
+
+			&--active, &--active:first-of-type, &--active:last-of-type
+					background-color: $active-color
+					color: #fff
+					border-color: $active-color
+			&:hover
+				color: darken($menu-color, 10%)
+
+			&--active:hover
+				color: #fff
+
 			&__link
 				display: block
 				min-height: 2.5rem
 				text-transform: uppercase
 				text-decoration: none
-				color: $menu-color
+				color: inherit
 				font-family: OswaldRegular, sans-serif
 				font-size: 0.875rem
 				text-align: center
 				padding: 0.5625rem
 
-				&:hover
-					color: darken($menu-color, 10%)
 
-				&--active
-					background-color: $active-color // Подумай как перекрыть дефолтный бордер, элегантно!
-					color: #fff
+
 

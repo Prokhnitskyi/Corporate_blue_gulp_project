@@ -147,7 +147,7 @@ ul {
   border: 1px solid #e7e7e7;
   border-right: none;
   padding-left: 10px;
-  background-color: #e7e7e7;
+  background-color: #f3f3f3;
 }
 
 @media screen and (max-width: 480px) {
@@ -192,6 +192,7 @@ ul {
   color: #fefefe;
   font-size: 0.875rem;
   font-family: OswaldRegular, sans-serif;
+  cursor: pointer;
 }
 
 .search__form__submit:hover {
@@ -205,7 +206,6 @@ ul {
 .navigation {
   margin: 23px auto 30px;
   width: 100%;
-  border: 1px solid #e7e7e7;
   background-color: #f3f3f3;
 }
 
@@ -224,6 +224,31 @@ ul {
   -webkit-flex-basis: 12.5%;
       -ms-flex-preferred-size: 12.5%;
           flex-basis: 12.5%;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  color: #b2b2b2;
+}
+
+.navigation__list__item:first-of-type {
+  border-left: 1px solid #e7e7e7;
+}
+
+.navigation__list__item:last-of-type {
+  border-right: 1px solid #e7e7e7;
+}
+
+.navigation__list__item--active, .navigation__list__item--active:first-of-type, .navigation__list__item--active:last-of-type {
+  background-color: #29c5e6;
+  color: #fff;
+  border-color: #29c5e6;
+}
+
+.navigation__list__item:hover {
+  color: #999999;
+}
+
+.navigation__list__item--active:hover {
+  color: #fff;
 }
 
 .navigation__list__item__link {
@@ -231,20 +256,11 @@ ul {
   min-height: 2.5rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: #b2b2b2;
+  color: inherit;
   font-family: OswaldRegular, sans-serif;
   font-size: 0.875rem;
   text-align: center;
   padding: 0.5625rem;
-}
-
-.navigation__list__item__link:hover {
-  color: #999999;
-}
-
-.navigation__list__item__link--active {
-  background-color: #29c5e6;
-  color: #fff;
 }
 
 .carousel {
